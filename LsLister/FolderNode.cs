@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LsLister
@@ -25,10 +23,11 @@ namespace LsLister
             {
                 addNode(node);
             }
-            else {
+            else
+            {
                 if (!children.ContainsKey(pathTree[0]))
                 {
-                    children.Add(pathTree[0], new FolderNode(pathTree[0],node.time,"未知节点","unknown","0"));
+                    children.Add(pathTree[0], new FolderNode(pathTree[0], node.time, "未知节点", "unknown", "0"));
                 }
                 FolderNode tmp = (FolderNode)children[pathTree[0]];
                 tmp.addNodeTo(pathTree.Skip(1).ToArray(), node);
@@ -41,7 +40,7 @@ namespace LsLister
         public override TreeNode collect()
         {
             TreeNode toReturn = new TreeNode(fileName);
-            foreach(Node node in children.Values)
+            foreach (Node node in children.Values)
             {
                 toReturn.Nodes.Add(node.collect());
             }

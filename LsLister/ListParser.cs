@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LsLister
@@ -49,9 +46,9 @@ namespace LsLister
                     tmp = new List<string>();
                 }
             }
-            for(int i = 0; i < listInString.Count; i++)
+            for (int i = 0; i < listInString.Count; i++)
             {
-                for(int j = 2; j < listInString[i].Count; j++)
+                for (int j = 2; j < listInString[i].Count; j++)
                 {
                     string[] pathTree = listInString[i][0].TrimEnd(':').Split('/');
                     topNode.addNodeTo(pathTree, nodeParse(listInString[i][j], listInString[i][1].Split(' ')[1]));

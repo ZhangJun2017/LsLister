@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LsLister
 {
-    public class FileNode:Node
+    public class FileNode : Node
     {
-        public FileNode(string fileName,DateTime time,string permission,string owner,string size)
+        public FileNode(string fileName, DateTime time, string permission, string owner, string size)
         {
             this.fileName = fileName;
             this.time = time;
